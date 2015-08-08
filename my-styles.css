@@ -8,7 +8,7 @@
   clear: both;
 }
 a {
-  color: #ff6b6b !important;
+  color: #FE8F00 !important;
 }
 a:hover {
   color: #21242e !important;
@@ -35,7 +35,7 @@ a:hover {
   float: left;
   overflow: hidden;
   margin-right: 8px;
-  background-color: #ff6b6b;
+  background-color: #FE8F00;
   color: #21242e;
   -webkit-border-radius: 2px 2px 2px 2px;
   -moz-border-radius: 2px 2px 2px 2px;
@@ -60,10 +60,10 @@ a:hover {
 }
 .logo a .text {
   float: left;
-  font-size: 30px;
+  font-size: 26px;
   line-height: 140%;
   font-weight: 700;
-  color: #ff6b6b;
+  color: #FE8F00;
 }
 .logo a img {
   display: block;
@@ -92,7 +92,7 @@ a:hover {
   background-color: #393f4f;
 }
 #documenter_sidebar ul li a.current {
-  background-color: #ff6b6b;
+  background-color: #FE8F00;
 }
 #documenter_sidebar #documenter_copyright {
   width: 100%;
@@ -108,7 +108,10 @@ a:hover {
   box-sizing: border-box;
 }
 #documenter_sidebar #documenter_copyright a {
-  color: #ff6b6b;
+  color: #FE8F00;
+}
+#documenter_sidebar #documenter_copyright a:hover {
+  color: #fff !important;
 }
 /* documenter_cover */
 #documenter_cover .logoWrapper {
@@ -120,7 +123,7 @@ a:hover {
 }
 #documenter_cover a {
   text-decoration: none;
-  color: #ff6b6b !important;
+  color: #FE8F00 !important;
 }
 #documenter_cover a:hover {
   color: #21242e !important;
@@ -128,6 +131,9 @@ a:hover {
 #documenter_cover p {
   color: #393f4f;
   font-size: 14px;
+}
+#documenter_content {
+  font-size: 110%;
 }
 #documenter_content pre {
   background: #DDE4EC;
@@ -141,4 +147,8 @@ a:hover {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+}
+
+#documenter_content ul li {
+  line-height: 1.8;
 }
