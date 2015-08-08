@@ -15,7 +15,7 @@ a:hover {
 }
 /* logo */
 .logoWrapper {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 .logo {
   display: block;
@@ -150,5 +150,9 @@ a:hover {
 }
 
 #documenter_content ul li {
-  line-height: 1.8;
+  line-height: 1.9;
+}
+
+#documenter_content ol li {
+  line-height: 1.9;
 }

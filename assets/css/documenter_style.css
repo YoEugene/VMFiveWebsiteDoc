@@ -210,7 +210,8 @@ noscript p{
 	margin-left:0 !important;
 }
 #documenter_content section{
-	padding-top:70px;
+	padding-top:10px;
+	padding-bottom: 30px;
 }
 #documenter_content h1{
 	font-size:30px;
