@@ -32,6 +32,7 @@ body{
 }
 footer, header, section {
 	display:block;
+	position: relative;
 }
 a{ color:#6F6F6F; text-decoration:none; cursor:pointer; }
 a:hover { text-decoration:underline }
