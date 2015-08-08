@@ -1,0 +1,290 @@
+// --- colors styles --------------------- 
+// main dark color
+@dark : #21242e;
+
+// light color 
+@light : #fff;
+
+@lightGray : #f5f6f8;
+
+@darkGray : #393f4f;
+
+// main accent color 
+// color 1 = Blue 
+@blue : #3498db;
+
+//  color 2 = Pink 
+@pink : #ff6b6b;
+
+// color 3 = Green
+@green : #16a085;
+
+// color 4 = Red
+@red : #cd2f2e;
+
+// color 5 = Purple
+@purple : #904eab;
+
+// color 6 = Purple
+@brown : #a57b4a;
+
+// color 7 = Purple
+@cyan : #2997ab;
+
+// color 8 = Purple
+@lightgreen : #38cbcb;
+
+// color 9 = Purple
+@yellow : #f8ba01;
+
+
+
+// text colors
+// content color of slider
+@sliderText : #c5c5c5; 
+
+// content color of all body texts
+@contentText : #7a7c82;
+
+@borderColor : #cccccc;
+
+
+// main font family
+@font : 'Open Sans', 'Helvetica', 'Tahoma', 'Arial', sans-serif;
+
+
+// ---------- PARAMETRIC MIXINS ----------
+// generally applied border raduis
+.round (@radius: 2px 2px 2px 2px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -o-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -khtml-border-radius: @radius;
+  border-radius: @radius;
+}
+
+
+// generally applied transition
+// transition ease in out
+
+.transitionEaseInOut (@duration: 0.4s, @ease: ease-in-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  -o-transition: all @duration @ease; 
+  -ms-transition: all @duration @ease; 
+  -khtml-transition: all @duration @ease; 
+  transition: all @duration @ease;
+}
+// transition linear
+.transitionLinear (@duration: 0.3s, @linear: linear) {
+  -webkit-transition: all @duration @linear;
+  -moz-transition: all @duration @linear;
+  -o-transition: all @duration @linear; 
+  -ms-transition: all @duration @linear; 
+  -khtml-transition: all @duration @linear; 
+  transition: all @duration @linear;
+}
+
+// generally applied box shadow 
+
+.box-shadow (@x: 0, @y: 0, @blur: 0.2px, @color: rgba(0,0,0,0.5)) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -o-box-shadow: @arguments;
+  -ms-box-shadow: @arguments;
+  -khtml-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+// generally applied text shadow
+
+.text-shadow (@x: 0, @y: 0, @blur: 0.2px, @color: rgba(0,0,0,0.5)) {
+  -webkit-text-shadow: @arguments;
+  -moz-text-shadow: @arguments;
+  -o-text-shadow: @arguments;
+  -ms-text-shadow: @arguments;
+  -khtml-text-shadow: @arguments;
+  text-shadow: @arguments;
+}
+
+// generally applied gradient
+.gradient (@from, @to) {
+  background-color: @from;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+  background-image: -webkit-linear-gradient(top, @from, @to);
+  background-image:    -moz-linear-gradient(top, @from, @to);
+  background-image:      -o-linear-gradient(top, @from, @to);
+  background-image:         linear-gradient(to bottom, @from, @to);
+}
+
+// generally applied inner-shadow
+.inner-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+  -webkit-box-shadow: inset @arguments;
+  box-shadow: inset  @arguments;
+}
+
+
+/* --- clearing --------------------- */
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
+}
+
+a {
+  color: @pink !important;  
+
+  &:hover {
+    color: @dark !important;
+  }
+}
+
+
+/* logo */
+.logoWrapper {
+  margin-bottom: 60px;
+}
+.logo {
+  display: block;
+  margin-top: 30px;
+  padding-left: 23px;
+
+  a {
+    float: left;
+    height: 33px;
+    display: block;
+    overflow: hidden;
+
+    // square
+    .square {
+      width: 33px;
+      height: 33px;
+      position: relative;
+      float: left;
+      overflow: hidden;
+      margin-right: 8px;
+      background-color: @pink;
+      color: @dark;
+      .round();
+      display: block;
+
+      span {
+        position: absolute;
+        bottom: 2px;
+        font-size: 22px;
+        left: 50%;
+        margin-left: -6.5px;
+        text-align: center;
+        font-weight: 700;
+        line-height: 1;
+        display: block;
+        height: 18px;
+        width: 13px;
+      }
+    }
+    // text 
+    .text {
+      float: left;
+      font-size: 30px;
+      line-height: 140%;
+      font-weight: 700;
+      color: @pink;
+    }
+    img {
+      display: block;
+    }
+  }
+ 
+} 
+
+
+
+/* documenter_sidebar menu */
+#documenter_sidebar {
+  background-color: @dark;
+  ul {
+    li {
+      text-align: left;
+      a {
+        text-align: left;
+        color: @light !important;
+        padding: 15px 15px 15px 23px;
+        border: 0;
+        .text-shadow(0,0,0,#000);
+        font-size: 13px;
+      }
+      a:hover {
+        background-color: @darkGray;
+      }
+      a.current {
+        background-color: @pink;
+      }
+    }
+  }
+
+  #documenter_copyright {
+    width: 100%;
+    padding: 20px 23px;
+    text-align: center;
+    color: @light;
+    font-size: 12px;
+    line-height: 25px;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    a {
+      color: @pink;
+    }
+  }
+}
+
+
+/* documenter_cover */
+#documenter_cover {
+  .logoWrapper {
+    margin-bottom: 30px;
+
+    .logo {
+      margin-top: 0;
+      padding-left: 0;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+    color: @pink !important;
+
+    &:hover {
+      color: @dark !important;
+    }
+  }
+
+  p {
+    color: @darkGray;
+    font-size: 14px;
+  }
+}
+
+#documenter_content pre {
+background: #DDE4EC;
+color: #7895B4;
+line-height: 22px;
+font-size: 14px;
+font-weight: bold;
+padding: 10px 14px;
+width: 90%;
+overflow-x: auto;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+}
+
+
+
+
