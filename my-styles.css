@@ -15,7 +15,7 @@ a:hover {
 }
 /* logo */
 .logoWrapper {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 .logo {
   display: block;
@@ -24,10 +24,14 @@ a:hover {
 }
 .logo a {
   float: left;
-  height: 33px;
+  height: 42px;
   display: block;
   overflow: hidden;
 }
+.logo a span:hover {
+  color: #DC6105 !important;
+}
+
 .logo a .square {
   width: 33px;
   height: 33px;
